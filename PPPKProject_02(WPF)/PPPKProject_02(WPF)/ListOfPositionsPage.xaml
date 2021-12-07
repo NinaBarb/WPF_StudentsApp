@@ -1,0 +1,82 @@
+﻿<local:FramedPage x:Class="PPPKProject_02_WPF_.ListOfPositionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PPPKProject_02_WPF_"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="ListOfPositionsPage">
+
+    <Grid Background="{StaticResource BrownBackground}">
+
+        <Button
+            x:Name="BtnPeople"
+            ToolTip="Go to list of people."
+            Background="Transparent"
+            BorderBrush="Transparent"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="30"
+            Height="30"
+            Margin="20"
+            Click="BtnPeople_Click">
+            <Image Source="/Assets/people.png"/>
+        </Button>
+
+        <ListView Margin="28,54,26,107" Name="LvPositions" AlternationCount="2">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <EventSetter Event="MouseDoubleClick" Handler="BtnEdit_Click"/>
+                    <Setter Property="Background" Value="LightBlue"/>
+                    <Style.Triggers>
+                        <Trigger Property="ListView.AlternationIndex" Value="1">
+                            <Setter Property="Background" Value="White"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="CadetBlue" />
+                        </MultiTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="126" Header="Title" DisplayMemberBinding="{Binding Title}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button 
+            x:Name="BtnEdit"
+            Content="Edit" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="75" 
+            Foreground="WhiteSmoke"
+            Background="#B5F3FF"            
+            Click="BtnEdit_Click"  RenderTransformOrigin="1.101,3.807" Margin="574,520,0,0"/>
+        <Button 
+            x:Name="BtnDelete"
+            Content="Delete" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="75" 
+            Foreground="WhiteSmoke"
+            Background="#FEBEF6"            
+            Click="BtnDelete_Click" RenderTransformOrigin="1.101,3.807" Margin="670,520,0,0"/>
+        <Button 
+            x:Name="BtnAdd"
+            Content="Add" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="75" 
+            Foreground="WhiteSmoke"
+            Background="#A8BAFF"            
+            Click="BtnAdd_Click" 
+            RenderTransformOrigin="1.101,3.807" 
+            Margin="475,520,0,0"/>
+    </Grid>
+</local:FramedPage>

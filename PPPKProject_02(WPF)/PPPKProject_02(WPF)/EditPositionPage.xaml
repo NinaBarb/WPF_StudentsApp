@@ -1,0 +1,53 @@
+﻿<local:FramedPage x:Class="PPPKProject_02_WPF_.EditPositionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PPPKProject_02_WPF_"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditPositionPage">
+
+    <Grid Background="{StaticResource BrownBackground}" x:Name="GridContainter">
+        <Button
+            x:Name="BtnBack"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="30"
+            Height="30"
+            Margin="20"
+            Click="BtnBack_Click">
+            <Image Source="/Assets/back.png"/>
+        </Button>
+
+        <Label 
+            Content="Title:" 
+            HorizontalAlignment="Left" 
+            Margin="147,135,0,0" 
+            VerticalAlignment="Top" 
+            Foreground="#FFF6F9FE"/>
+
+        <TextBox 
+            x:Name="TbTitle"
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="224,134,0,0" 
+            TextWrapping="Wrap" 
+            Text="{Binding Title}" 
+            VerticalAlignment="Top" Width="291"/>
+
+        <Button 
+            x:Name="BtnCommit"
+            Content="Commit" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="91" 
+            Foreground="WhiteSmoke"
+            Background="#A8BAFF"            
+            Click="BtnCommit_Click"
+            Margin="424,243,0,0" Height="32"/>
+
+    </Grid>
+</local:FramedPage>
