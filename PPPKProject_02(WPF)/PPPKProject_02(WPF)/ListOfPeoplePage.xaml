@@ -21,7 +21,7 @@
             Height="30"
             Margin="20"
             Click="BtnCourses_Click">
-            <Image Source="Assets/courses.png"/>
+            <Image Source="{StaticResource imageCourses}"/>
         </Button>
 
         <Button
@@ -35,7 +35,7 @@
             Height="30"
             Margin="55,20,0,0"
             Click="BtnPosition_Click">
-            <Image Source="Assets/position.png"/>
+            <Image Source="{StaticResource imagePosition}"/>
         </Button>
 
         <ListView Margin="28,54,26,107" Name="LvUsers" AlternationCount="2">

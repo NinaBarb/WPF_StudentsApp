@@ -5,5 +5,10 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ImageBrush x:Key="BrownBackground" ImageSource="/Assets/backround.png"/>
+        <BitmapImage x:Key="imageCourses" UriSource="/Assets/courses.png"/>
+        <BitmapImage x:Key="imageBack" UriSource="/Assets/back.png"/>
+        <BitmapImage x:Key="imageLook" UriSource="/Assets/look.png"/>
+        <BitmapImage x:Key="imagePeople" UriSource="/Assets/people.png"/>
+        <BitmapImage x:Key="imagePosition" UriSource="/Assets/position.png"/>
     </Application.Resources>
 </Application>

@@ -21,7 +21,21 @@
             Height="30"
             Margin="20"
             Click="BtnPeople_Click">
-            <Image Source="/Assets/people.png"/>
+            <Image Source="{StaticResource imagePeople}"/>
+        </Button>
+
+        <Button
+            x:Name="BtnPositions"
+            ToolTip="Go to list of positions."
+            Background="Transparent"
+            BorderBrush="Transparent"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="30"
+            Height="30"
+            Margin="55,19,0,0"
+            Click="BtnPositions_Click">
+            <Image Source="{StaticResource imagePosition}"/>
         </Button>
 
         <ListView Margin="28,54,26,107" Name="LvCourses" AlternationCount="2">

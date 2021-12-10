@@ -46,14 +46,8 @@ namespace PPPKProject_02_WPF_
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new EditPersonPage(PersonViewModel) { Frame = Frame });
 
-        private void BtnCourses_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(new ListOfCoursesPage(new CourseViewModel()) { Frame = Frame });
-        }
+        private void BtnCourses_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new ListOfCoursesPage(new CourseViewModel()) { Frame = Frame });
 
-        private void BtnPosition_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(new ListOfPositionsPage(new PositionViewModel()) { Frame = Frame });
-        }
+        private void BtnPosition_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new ListOfPositionsPage(new PositionViewModel()) { Frame = Frame });
     }
 }

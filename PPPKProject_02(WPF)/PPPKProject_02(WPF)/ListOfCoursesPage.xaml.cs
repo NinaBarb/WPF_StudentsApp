@@ -30,10 +30,7 @@ namespace PPPKProject_02_WPF_
             viewModel = courseViewModel;
         }
 
-        private void BtnPeople_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(new ListOfPeoplePage(new PersonViewModel()) { Frame = Frame });
-        }
+        private void BtnPeople_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new ListOfPeoplePage(new PersonViewModel()) { Frame = Frame });
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new EditCoursePage(CourseViewModel) { Frame = Frame });
 
@@ -59,5 +56,7 @@ namespace PPPKProject_02_WPF_
             Course course = viewModel.Courses.FirstOrDefault(c => c.IDCourse == (int)button.Tag);
             new CourseDetails(PersonCourseViewModel, course).Show();
         }
+
+        private void BtnPositions_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new ListOfPositionsPage(new PositionViewModel()) { Frame = Frame });
     }
 }

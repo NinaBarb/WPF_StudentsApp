@@ -15,8 +15,7 @@ namespace PPPKProject_02_WPF_.Dal
 {
     class SqlRepository : IRepository
     {
-        private static readonly string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
-        //private static readonly string cs = EncryptionUtils.Decrypt(ConfigurationManager.ConnectionStrings["cs"].ConnectionString, "Pa$$w0rd");
+        private static readonly string cs = EncryptionUtils.Decrypt(ConfigurationManager.ConnectionStrings["cs"].ConnectionString, "fru1tc@k3");
 
         private const string FirstNameParam = "@Firstname";
         private const string LastNameParam = "@Lastname";

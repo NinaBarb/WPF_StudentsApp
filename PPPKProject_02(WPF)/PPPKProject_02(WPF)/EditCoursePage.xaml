@@ -19,7 +19,7 @@
             Height="30"
             Margin="20"
             Click="BtnBack_Click">
-            <Image Source="/Assets/back.png"/>
+            <Image Source="{StaticResource imageBack}"/>
         </Button>
 
         <Label 
